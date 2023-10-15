@@ -5,7 +5,7 @@ let model = initModels(sequelize);
 
 export const userOrder = async (req, res) => {
   const { user_id, food_id, amount, code } = req.body;
-  const checkOrder = await model.orders.findOne({
+  const checkOrder = await model.order.findOne({
     where: {
       code,
     },
@@ -19,7 +19,7 @@ export const userOrder = async (req, res) => {
       amount,
       code,
     };
-    await model.orders.create(newData);
+    await model.order.create(newData);
     res.send("Bạn đã đặt hàng thành công");
   }
 };

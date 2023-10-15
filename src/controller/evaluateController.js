@@ -1,4 +1,4 @@
-import { DATE } from "sequelize";
+
 import sequelize from "../model/connect.js";
 import initModels from "../model/init-models.js";
 
